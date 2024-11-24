@@ -5,12 +5,15 @@ public class Studente {
     private String surname;
     private int age;
     private ContoBancario banckAccount;
+    private RegistroStudenti registroStudenti;
 
-    public Studente (String name, String surname, int age){
+    public Studente (String name, String surname, int age, RegistroStudenti registro){
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.banckAccount = new ContoBancario();
+        this.registroStudenti = registro;
+        this.registroStudenti.addStudent(this);
     }
 
     public String getDetails(){
