@@ -3,8 +3,8 @@ public class ContoBancario {
     private int accountNumber;
     private int balance;
 
-    public ContoBancario(int accountNumber){
-        this.accountNumber = accountNumber;
+    public ContoBancario(){
+        this.accountNumber = (int) (Math.random() * 1000) + 1;;
         this.balance = 0;
     }
 

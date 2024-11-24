@@ -9,12 +9,7 @@ public class App {
 
         bept4.addStudent(davide);
         System.out.println(bept4.getStudents());
-        bept4.addStudent(danilo);
-        System.out.println(bept4.getStudents());
-        bept4.addStudent(lucrezia);
-        System.out.println(bept4.getStudents());
-        bept4.addStudent(paolo);
-        System.out.println(bept4.getStudents());
-
+        davide.getBankAccount().deposit(100000);
+        System.out.println("il salldo del conto in banca di davide è di " + davide.getBankAccount().getBalace() + "$");
     }
 }
