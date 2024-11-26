@@ -7,11 +7,19 @@ public class Studente {
     private ContoBancario banckAccount;
     private RegistroStudenti registroStudenti;
 
-    public Studente (String name, String surname, int age, RegistroStudenti registro){
+    public Studente (String name, String surname, int age){
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.banckAccount = new ContoBancario();
+    }
+
+    public Studente(String name, String surname, int age, RegistroStudenti registro){
+        this(name, surname, age);
+        this.addToRegistroStudenti(registro);
+    }
+
+    public void addToRegistroStudenti(RegistroStudenti registro){
         this.registroStudenti = registro;
         this.registroStudenti.addStudent(this);
     }
